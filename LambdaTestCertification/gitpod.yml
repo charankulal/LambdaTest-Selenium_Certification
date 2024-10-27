@@ -1,0 +1,6 @@
+﻿tasks:
+  - init: npm install
+    command: dotnet test
+ports:
+  - port: 8080
+    onOpen: open-preview
