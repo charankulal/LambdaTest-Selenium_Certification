@@ -1,0 +1,12 @@
+tasks:
+  init:
+    description: "Install npm packages"
+    command: npm install
+
+  test:
+    description: "Run .NET tests"
+    command: dotnet test
+
+ports:
+  - port: 8080
+    onOpen: open-preview
