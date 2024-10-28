@@ -1,12 +1,15 @@
 tasks:
-  init:
-    description: "Install npm packages"
-    command: npm install
-
-  test:
-    description: "Run .NET tests"
-    command: dotnet test
-
+  - name: Install dependencies
+    init: >
+      dotnet restore
+    command: >
+      dotnet build
+ 
 ports:
-  - port: 8080
+  - port: 5000
     onOpen: open-preview
+ 
+vscode:
+  extensions:
+    - ms-dotnettools.csharp
+    - formulahendry.dotnet-test-explorer
